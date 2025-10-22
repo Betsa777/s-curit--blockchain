@@ -1,0 +1,15 @@
+//Le but est de retourner 42 en retour
+//Je dois charger 42 en memoire avec l'instruction mstore
+#define macro MAIN() = takes(0) returns(0){
+    
+    whatIsTheMeaningOfLife:   //[whatisTheMeaningOfLife]
+      GET_THE_RESULT()
+       
+}
+
+#define macro GET_THE_RESULT() = takes(0) returns(0){
+    0x2a            //stack:[2a]
+    0x00            //stack: [0 , 2a]
+    mstore          // stack:[] , memory[2a]
+    0x20 0x00 return //stack[] , memory:[]
+}
